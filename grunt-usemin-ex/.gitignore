@@ -1,0 +1,4 @@
+.DS_Store
+.tmp
+client/dist
+node_modules

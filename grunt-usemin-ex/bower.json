@@ -1,0 +1,13 @@
+{
+  "name": "grunt-usemin-ex",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pdehaan/grunt-usemin-ex",
+  "authors": [
+    "Peter deHaan <peter@deseloper.com>"
+  ],
+  "license": "WTFPL",
+  "dependencies": {
+    "angular": "~1.2.25",
+    "bootstrap": "~3.2.0"
+  }
+}

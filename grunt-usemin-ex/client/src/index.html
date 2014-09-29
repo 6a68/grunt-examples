@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Got usemin?</title>
+
+  <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+  <!-- build:css assets/css/style.min.css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
+  <!-- endbuild -->
+
+</head>
+<body ng-app="app">
+
+  <div class="container">
+    <p>{{ 'Hello world' | uppercase |  now }}</p>
+    <table class="table" ng-controller="UserController">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="user in users">
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.value }}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+  <script src="../bower_components/angular/angular.min.js"></script>
+
+  <!-- build:js assets/js/app.min.js -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controllers.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
