@@ -1,4 +1,5 @@
 .DS_Store
 .tmp
+client/bower_components
 client/dist
 node_modules
