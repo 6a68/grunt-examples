@@ -1,49 +1,82 @@
 module.exports = function(grunt) {
-  'use strict';
+  "use strict";
 
-  require('load-grunt-tasks')(grunt);
+  require("load-grunt-tasks")(grunt);
 
   grunt.config.init({
-    useminPrepare: {
-      html: 'client/src/index.html',
-      options: {
-        dest: 'client/dist'
-      }
+    Globals: {
+      SRC: "client/src",
+      DIST: "client/dist",
+      TMP: ".tmp"
     },
-    usemin: {
-      html: [
-        'client/dist/index.html'
-      ]
-    },
-    copy: {
-      html: {
-        src: 'client/src/index.html',
-        dest: 'client/dist/index.html'
-      }
-    },
+
     clean: {
       all: [
-        '.tmp',
-        'client/dist'
+        "<%= Globals.TMP %>",
+        "<%= Globals.DIST %>"
       ],
       tmp: [
-        '.tmp'
+        "<%= Globals.TMP %>"
+      ]
+    },
+
+    copy: {
+      html: {
+        src: "<%= Globals.SRC %>/index.html",
+        dest: "<%= Globals.DIST %>/index.html"
+      }
+    },
+
+    eslint: {
+      options: {
+        config: ".eslintrc"
+      },
+      app: {
+        src: [
+          "*.js",
+          "<%= Globals.SRC %>/**/*.js"
+        ]
+      }
+    },
+
+    uglify: {
+      options: {
+        report: "min",
+        mangle: false
+      }
+    },
+
+    useminPrepare: {
+      html: "<%= Globals.SRC %>/index.html",
+      options: {
+        dest: "<%= Globals.DIST %>"
+      }
+    },
+
+    usemin: {
+      html: [
+        "<%= Globals.DIST %>/index.html"
       ]
     }
   });
 
-  grunt.registerTask('default', [
-    'build'
+  grunt.registerTask("default", [
+    "lint",
+    "build"
   ]);
 
-  grunt.registerTask('build', [
-    'clean:all',
-    'copy:html',
-    'useminPrepare',
-    'concat',
-    'uglify',
-    'cssmin',
-    'usemin',
-    'clean:tmp'
+  grunt.registerTask("lint", [
+    "eslint"
+  ]);
+
+  grunt.registerTask("build", [
+    "clean:all",
+    "copy:html",
+    "useminPrepare",
+    "concat",
+    "uglify",
+    "cssmin",
+    "usemin",
+    "clean:tmp"
   ]);
 };

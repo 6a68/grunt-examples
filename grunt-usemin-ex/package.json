@@ -1,7 +1,7 @@
 {
   "name": "grunt-usemin-ex",
   "description": "grunt-usemin example.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Peter deHaan <peter@deseloper.com> (http://nodeexamples.com/)",
   "bugs": "https://github.com/pdehaan/grunt-examples/issues",
   "devDependencies": {
@@ -11,17 +11,17 @@
     "grunt-contrib-copy": "0.6.0",
     "grunt-contrib-cssmin": "0.10.0",
     "grunt-contrib-uglify": "0.6.0",
+    "grunt-eslint": "1.1.0",
     "grunt-usemin": "2.4.0",
     "load-grunt-tasks": "0.6.0"
   },
   "homepage": "https://github.com/pdehaan/grunt-examples/grunt-usemin-ex",
-  "keywords": [
-  ],
+  "keywords": [],
   "license": "WTFPL",
   "main": "Gruntfile.js",
   "repository": "pdehaan/grunt-examples",
   "scripts": {
     "start": "grunt build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt lint"
   }
 }
