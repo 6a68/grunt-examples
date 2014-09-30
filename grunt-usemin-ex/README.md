@@ -2,10 +2,10 @@
 
 Simple grunt-usemin example which shows how you can minify/optimize [Angular.js](https://angularjs.org) resources using:
 
-- [gruntjs/**grunt-contrib-concat**](https://github.com/gruntjs/grunt-contrib-concat)
-- [gruntjs/**grunt-contrib-cssmin**](https://github.com/gruntjs/grunt-contrib-cssmin)
-- [gruntjs/**grunt-contrib-uglify**](https://github.com/gruntjs/grunt-contrib-uglify)
-- [yeoman/**grunt-usemin**](https://github.com/yeoman/grunt-usemin)
+- [gruntjs/**grunt-contrib-concat**](https://github.com/gruntjs/grunt-contrib-concat) &mdash; Concatenate files.
+- [gruntjs/**grunt-contrib-cssmin**](https://github.com/gruntjs/grunt-contrib-cssmin) &mdash; Minify CSS.
+- [gruntjs/**grunt-contrib-uglify**](https://github.com/gruntjs/grunt-contrib-uglify) &mdash; Minify files with [UglifyJS](http://lisperator.net/uglifyjs/).
+- [yeoman/**grunt-usemin**](https://github.com/yeoman/grunt-usemin) &mdash; Replaces references to non-minified scripts / stylesheets.
 
 Also uses the wonderful [ESLint](http://eslint.org/) for linting (via the [grunt-eslint](https://github.com/sindresorhus/grunt-eslint) module).
 
@@ -36,9 +36,7 @@ $ open http://localhost:8000/client/dist/ # Preview production build.
 - `usemin` &mdash; Replaces references to non-minified scripts / stylesheets *
 - `useminPrepare` &mdash; Using HTML markup as the primary source of information *
 
-**Note:** Tasks run in the order specified. Arguments may be passed to tasks that accept
-them by using colons, like "lint:files". Tasks marked with * are "multi tasks"
-and will iterate over all sub-targets if no argument is specified.
+**Note:** Tasks run in the order specified. Arguments may be passed to tasks that accept them by using colons, like "lint:files". Tasks marked with * are "multi tasks" and will iterate over all sub-targets if no argument is specified.
 
 ## Files
 
