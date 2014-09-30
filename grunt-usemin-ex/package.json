@@ -22,6 +22,7 @@
   "repository": "pdehaan/grunt-examples",
   "scripts": {
     "start": "grunt build",
-    "test": "grunt lint"
+    "test": "grunt",
+    "lint": "grunt lint"
   }
 }
