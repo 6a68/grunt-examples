@@ -14,12 +14,12 @@ Also uses the wonderful [ESLint](http://eslint.org/) for linting (via the [grunt
 ```sh
 $ git clone git@github.com:pdehaan/grunt-examples.git
 $ cd grunt-examples/grunt-usemin-ex
-$ npm install # &mdash; Install Node.js dependencies.
-$ bower install # &mdash; Install Bower dependencies.
-$ grunt build # &mdash; Generate production assets.
-$ python -m SimpleHTTPServer # &mdash; Start local Python web server.
-$ open http://localhost:8000/client/src/ # &mdash; Preview development build.
-$ open http://localhost:8000/client/dist/ # &mdash; Preview production build.
+$ npm install # Install Node.js dependencies.
+$ bower install # Install Bower dependencies.
+$ grunt build # Generate production assets.
+$ python -m SimpleHTTPServer # Start local Python web server.
+$ open http://localhost:8000/client/src/ # Preview development build.
+$ open http://localhost:8000/client/dist/ # Preview production build.
 ```
 
 ## Available Grunt tasks
